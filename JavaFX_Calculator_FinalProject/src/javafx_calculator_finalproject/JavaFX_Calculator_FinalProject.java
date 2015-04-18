@@ -367,8 +367,15 @@ public class JavaFX_Calculator_FinalProject extends Application {
     static class keyPressed implements EventHandler<KeyEvent>{
         @Override
         public void handle(KeyEvent kb){
-    
-                
+            /*try this instead, I will test it at home. 
+             you can replace the whole if/else with this single line of code
+             
+             setInput.getInput().getText() + kb.getCharacter();
+             
+             if you want to do a numeric or symbolic validation, that can be a different method
+             i'm going to make an array of valid characters. we will look for those.
+             Anything else not on that list can be ignored.
+           */
             if (kb.getCharacter().equals("0"))
                setInput(getInput().getText()+ "0");
             else if(kb.getCharacter().equals("1"))
